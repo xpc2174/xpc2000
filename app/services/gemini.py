@@ -257,7 +257,7 @@ class GeminiClient:
                 tool_config = {"function_calling_config": config}
         
         # 3. 添加 tool_config 到 data
-        if tool_config:
+        if tool_config and data.get("tools"):
             data["tool_config"] = tool_config
 
         if system_instruction:
